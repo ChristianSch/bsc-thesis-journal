@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Research Journal</title>
+
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+
+        <!-- typeplate -->
+        <link rel="stylesheet" href="css/typeplate.css" type="text/css" media="all">
+
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                extensions: ["tex2jax.js"],
+                jax: ["input/TeX", "output/HTML-CSS"],
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true
+                },
+                "HTML-CSS": { availableFonts: ["TeX"] }
+            });
+        </script>
+        <script type="text/javascript" src="js/MathJax/MathJax.js"></script>
+
+        <!-- Highlight.js -->
+        <link rel="stylesheet" href="js/Highlight.js/styles/default.css">
+        <script src="js/Highlight.js/highlight.pack.js" type="text/javascript"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+
+    <body id="top">
+        <div id="main-wrap">
+            <h1>Research Journal</h1>
+            <h2 class="sub-h2"></h2>
+
+            <div id="last-change">
+                <p>Last changed: <time datetime="2015-06-09">July 20th, 2015</time></p>
+            </div>
+
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#conc-def">Concepts and Definitions</a>
+                    <ol>
+                        <li><a href="#def-ml">Definition: Machine Learning</a></li>
+                        <li><a href="#def-dl">Definition: Deep Learning</a></li>
+                        <li><a href="#why-dl">Why Deep Learning?</a></li>
+                        <li><a href="#generative-models">Generative Models</a></li>
+                        <li><a href="#discriminative-models">Discriminative Models</a></li>
+                    </ol>
+                </li>
+
+                <li><a href="#papers">Papers</a>
+                    <ul>
+                        <li><a href="#week-1">Week 1</a>
+                            <ol>
+                                <li><a href="#emotions-from-text-tbep">Emotions from text: machine learning for text-based emotion prediction</a></li>
+                                <li><a href="#ml-class-music-emo">Multi-Label Classification of Music into Emotions</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#week-2">Week 2</a>
+                            <ol>
+                                <li><a href="#judging-movie-poster-dl">Judging a Movie by its Poster using Deep Learning</a></li>
+                                <li><a href="#disamb-music-emo-sa">Disambiguating Music Emotion Using Software Agents</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#footnotes">Footnotes</a></li>
+                <li><a href="#references">References</a></li>
+            </ol>
+
+            <h2 id="conc-def">Concepts and Definitions</h2>
+
+            <h3 id="def-ml">Definition: Machine Learning<a class="anchor-link" href="#def-ml"></a></h3>
+            »A computer program is said to learn from experimence E with respect
+            to some class of tasks T and performance measure P, if its performance at
+            tasks in T , as measured by P, improves with experience E.« — Mitchell, 1997<sup><a href="#footnote1">[1]</a></sup>
+            <h3 id="def-dl">Definition: Deep Learning</h3>
+            <h4 id="why-dl">Why Deep Learning?</h4>
+            <p>Although <em>Shallow Neural Networks</em> (traditional Neural Networks with
+            <em>one or two</em><sup>citation needed</sup> hidden layers)
+            work ok for most models, more hidden layers
+            result in better results. The problem is that the backpropagation
+            algorithm does not work well on randomly initialized <em>Deep Neural
+            Networks</em> (Neural Networks with more than <em>two</em><sup>citation needed</sup>
+            hidden layers)
+            because it might get stuck in local minima and thus result
+            in poor solutions.
+            <sup><a href="#footnote2">[2]</a></sup></p>
+
+            <p>In contrast to shallow Neural Nets, Deep Neural Networks allow for
+            learning on hierarchical models that provide a progression from high level
+            to low level complexity, and thus refining the representation with each hidden
+            layer representing a level of abstraction.<sup>citation needed</sup></p>
+
+            <h3 id="generative-models">Generative Models<a class="anchor-link" href="#generative-models"></a></h3>
+            <p><em>Generative Models</em> are Machine Learning models that yield an
+            alternative representation of the input data. They represent an alternative
+            view on the data that might improve the learning because it improves the
+            feature space (for example it fits the feature space better to the
+            desired output).<sup>citation needed</sup>
+
+
+            <h3 id="discriminative-models">Discriminative Models<a class="anchor-link" href="#discriminative-models"></a></h3>
+
+            <h3 id="nlp">Natural Language Processing<a class="anchor-link" href="#nlp"></a></h3>
+            <h4 id="nlp-token">Token<a class="anchor-link" href="#nlp-token"></a></h4>
+            <p>A <em>Token</em> mean individual occurences of something (?). A Token
+            has an associated <em>Type</em>.<sup><a href="#ref1">[ManningSchütze, P. 22]</a></sup></p>
+
+            <h4 id="ngram-model">n-gram Model<a class="anchor-link" href="#ngram-model"></a></h4>
+            <p>The <em>n-gram Model</em> is basically just a Markov Chain modelling
+            the assumption that a probability of a word in a text only depends
+            on the previous $k$ words.<sup><a href="#ref1">[ManningSchütze, P. 77]</a></sup></p>
+
+            <h4 id="nlp-pos">Parts of Speech (POS)<a class="anchor-link" href="#nlp-pos"></a></h4>
+            <p><em>Parts of Speech (POS)</em> refers to classes of words
+            which show syntactically similar behavior, often a semantic type. Examples
+            are Nouns and Adjectives. An easy way to test words for a given class
+            is the <em>Substition Test</em>, which consists of replacing a word of the same
+            (assumed) class in a sentence.</p>
+            <p>Each of these POS classes have associated <em>Parts of Speech Tags</em>
+            which really are just abbreviations of the class.
+            <sup><a href="#ref1">[ManningSchütze, P. 81f]</a></sup></p>
+
+            <h4 id="bow">Bag of Words<a class="anchor-link" href="#bow"></a></h4>
+            <p><em>Bag of Words</em> is a listing of words with their corresponding
+            wordcount. Each row represents a document, a column represents a word
+            and a cell contains the wordcount.<sup>citation needed</sup></p>
+
+            <h4 id="tfidf">Term-frequency-inverse Document Frequency<a class="anchor-link" href="#tfidf"></a></h4>
+            <p><em>Term-frequency-inverse document frequency</em> associates weight to
+            words and measures the relevance, and not the frequency, as opposed to
+            <em>Bag of Words</em>.<sup>citation needed</sup></p>
+
+            <h2 id="papers">Papers<a class="anchor-link" href="#papers"></a></h2>
+            <h2 class="week-indicator" id="week-1">Week 1<a class="anchor-link" href="#week-1"></a></h2>
+
+            <article>
+                <h3 id="emotions-from-text-tbep">Emotions from text: machine learning for text-based emotion prediction<sup><a href="#footnote3">[3]</a></sup><a class="anchor-link" href="#emotions-from-text-tbep"></a></h3>
+                <div class="byline">
+                    <address class="author">By <a rel="author">Cecilia Ovesdotter Alm</a>, <a rel="author">Dan Roth</a> and <a rel="author">Richard Sproat</a></address>
+                </div>
+
+                <div class="tags">
+                    <ul>
+                        <li>SNoW-Architecture</li>
+                        <li>NLP</li>
+                        <li>Text-to-Speech</li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    »In addition to information, text contains attitudinal, and more specifically, emotional
+                    content. This paper explores the text-based emotion prediction problem empirically,
+                    using supervised machine learning with the SNoW learning architecture. The goal is
+                    to classify the emotional affinity of sentences in the narrative domain of children’s
+                    fairy tales, for subsequent usage in appropriate expres-sive rendering of text-to-speech
+                    synthesis. Initial experiments on a preliminary data set of 22 fairy tales show encouraging
+                    results over a naive baseline and BOW approach for classification of emotional versus
+                    non-emotional contents, with some dependency on parameter tuning. We also discuss results
+                    for a tripartite model which covers emotional valence, as well as feature set alternations.
+                    In addition, we present plans for a more cognitively sound sequential model, taking into
+                    consideration a larger set of basic emotions.«
+                    <!--<sup><a href="#footnote1">[1]</a></sup>-->
+                </blockquote>
+
+                <h4>Notes</h4>
+                <ul>
+                    <li>I defenitely have to read more about word kinds like hyponyms, homonyms etc. to get a better understanding of the feature selection.</li>
+                </ul>
+
+                <h4>Further Action Items</h4>
+                <ul>
+                    <li>SNoW</li>
+                    <li>Winnow Update Rule</li>
+                    <li>10-fold cross validation</li>
+                    <li>POS</li>
+                    <li>Winnow Parameter Tuning</li>
+                    <li>BOW</li>
+                    <li>WordNET / synset</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3 id="ml-class-music-emo">[2] Multi-Label Classification of Music into Emotions<a class="anchor-link" href="#ml-class-music-emo"></a></h3>
+                <div class="byline">
+                    <address class="author">By <a rel="author">Konstantinos Trohidis</a>, <a rel="author">Grigorios Tsoumakas</a>, <a rel="author">George Kalliris</a> and <a rel="author">Ioannis P. Vlahavas</a></address>
+                </div>
+
+                <div class="tags">
+                    <ul>
+                        <li>Music Information Retrieval System</li>
+                        <li>Support Vector Machine</li>
+                        <li>Multi Label Classification</li>
+                        <li>Binary Relevance Algorithm</li>
+                        <li>k-Labelsets Algorithm</li>
+                        <li>k-Nearest Neighbour Algorithm</li>
+                        <li>Tellegen-Watson-Clark Model</li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    »In this paper, the automated detection of emotion in music is modeled as a multilabel
+                    classification task, where a piece of music may belong to more than one class. Four
+                    algorithms are evaluated and compared in this task. Furthermore, the predictive power
+                    of several audio features is evaluated using a new multilabel feature selection method.
+                    Experiments are conducted on a set of 593 songs with 6 clusters of music emotions based
+                    on the Tellegen-Watson-Clark model. Results provide interesting insights into the quality
+                    of the discussed algorithms and features.«
+                    <!--<sup><a href="#footnote1">[1]</a></sup>-->
+                </blockquote>
+
+                <h4>Notes</h4>
+                <ul>
+                    <li>Good hints on previous/related work on the problem.</li>
+                    <li>Introduces custom averaging with  label correlations (328).</li>
+                    <li>States that clustering might be tricky due to semantic overlapping of moods.</li>
+                </ul>
+
+                <h4>Further Action Items</h4>
+                <ul>
+                    <li>Tellegen-Watson-Clark Emotion Model / PANAS</li>
+                    <li>ML-kNN</li>
+                    <li>attribute evaluation statistic / $\chi^2$ gain ratio</li>
+                    <li>averaging methods: max/avg</li>
+                    <li>gaussian mixture models</li>
+                    <li>mutilabel feature ranking</li>
+                    <li>music information retrieval system by emotion</li>
+                </ul>
+            </article>
+
+            <h2 class="week-indicator" id="week-2">Week 2<a class="anchor-link" href="#week-2"></a></h2>
+            <article>
+                <h3 id="judging-movie-poster-dl">[3] Judging a Movie by its Poster using Deep Learning<a class="anchor-link" href="#judging-movie-poster-dl"></a></h3>
+                <div class="byline">
+                    <address class="author">By <a rel="author">Brett Kuprel</a></address>
+                </div>
+
+                <div class="tags">
+                    <ul>
+                        <li>Deep Learning</li>
+                        <li>Artificial Neural Networks</li>
+                        <li>Gradient Descent</li>
+                        <li>Auto-Encoders</li>
+                        <li>Imdb</li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    »It is often the case that a human can de-termine the genre of a movie by looking at its
+                    movie poster. This task is not trivial for computers. A recent advance in machine learning
+                    called deep learning allows algorithms to learn important features from large datasets.
+                    Rather than analyzing an image pixel by pixel, for example, higher level features can be
+                    used for classication. In this project I attempted to train a neural network of stacked
+                    autoencoders to predict a movie's genre given an image of its movie poster. My hypothesis
+                    is that a good algorithm can correctly guess the genre based on the movie poster at least
+                    half the time.«
+                </blockquote>
+
+                <h4>Notes</h4>
+                <ul>
+                    <li>Good hint on future work on the problem</li>
+                </ul>
+
+                <h4>Further Action Items</h4>
+                <ul>
+                    <li>Theano (with example stacked auto-encoders)</li>
+                    <li>argmax</li>
+                    <li>diffusion of gradients</li>
+                    <li>curse of dimensionality</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3 id="disamb-music-emo-sa">Disambiguating Music Emotion Using Software Agents<sup>[4]</sup><a class="anchor-link" href="#disamb-music-emo-sa"></a></h3>
+
+                <div class="byline">
+                    <address class="author">By <a rel="author">Dan Yang</a> and <a rel="author">Won-Sook Lee</a></address>
+                </div>
+
+                <div class="tags">
+                    <ul>
+                        <li>Support Vector Machine</li>
+                        <li>Weka</li>
+                        <li>Rainbow Text Mining</li>
+                        <li>Tellegen-Watson-Clark</li>
+                        <li>Verbal Emotion Identification</li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    »Annotating music poses a cognitive load on listeners and this potentially interferes with
+                    the emotions being reported. One solution is to let software agents learn to make  the
+                    annotator’s task easier and more efficient. Emo is a music annotation prototype that
+                    combines inputs from both human and software agents to better study human listening. A
+                    compositional  theory of musical meaning provides the overall heuristics for the annotation
+                    process,  with the listener drawing upon different influences such as acoustics, lyrics and
+                    cultural metadata to focus on a specific musical mood. Software agents track the way these
+                    choices are made from the influences  available. A functional theory of human emotion
+                    provides the basis for introducing necessary  bias into the machine learning agents.
+                    Conflicting positive and negative emotions can be separated on the basis of their different
+                    function (reward-approach and threat-avoidance) or dysfunction (psychotic). Negative
+                    emotions have strong ambiguity and these are the focus of the experiment. The results
+                    of mining psychological features of lyrics are promising, recognisable in terms of common
+                    sense ideas of emotion and in terms of accuracy. Further ideas for deploying agents in this
+                    model of music annotation are presented.«
+                </blockquote>
+
+                <h4>Notes</h4>
+                <ul>
+                    <li>States that future work could be done on graphical media</li>
+                    <li>Weak dataset and pretty similar to [2]</li>
+                    <li>Deploys simple »structured rating mode for embodyment in software agents to assist
+                    human annotators«</li>
+                    <li>Mentions semantic web and shared music ontologies</li>
+                </ul>
+
+                <h4>Further Action Items</h4>
+                <ul>
+                    <li>Baumann's Beagle System</li>
+                    <li>Sum of Normed Fast Fourier Transformation (not relevant)</li>
+                    <li>General Inquirer Package</li>
+                    <li>Weka</li>
+                    <li>Rainbow Text Mining</li>
+                    <li>Verbal Emotion Identification</li>
+                </ul>
+            </article>
+
+            <h2 class="week-indicator" id="week-4">Week 4<a class="anchor-link" href="#week-4"></a></h2>
+            <article>
+                <h3 id="dl-mlc">Deep Learning for Multi-label Classification<sup>[5]</sup><a class="anchor-link" href="#dl-mlc"></a></h3>
+                <div class="byline">
+                    <address class="author">By <a rel="author"></a></address>
+                </div>
+            </article>
+
+            <h2 id="appendix">Appendix<a class="anchor-link" href="#appendix"></a></h2>
+            <h3 id="footnotes">Footnotes<a class="anchor-link" href="#footnotes"></a></h3>
+
+            <ol>
+                <!--<li id="footnote1">Taken from the Machine Learning Video Lecture: »What is Machine Learning?«, Minute <code>01:49</code> at <a href="https://class.coursera.org/ml-008/lecture/2" title="Video Lecture on Coursera">Coursera</a></li>-->
+                <li id="footnote1">»Machine Learning«, Tom E. Mitchell, Published by McGraw-Hill, ISBN: 0070428077</li>
+                <li id="footnote2">»Greedy Layer-Wise Training of Deep Networks«, Yoshua Bengio, Pascal Lamblin, Dan Popovici and Hugo Larochelle, NIPS, 2007</li>
+                <li id="footnote3"><a href="http://l2r.cs.uiuc.edu/~danr/Papers/AlmRoSp05.pdf">Cecilia Ovesdotter Alm, Dan Roth, and Richard Sproat. Emotions from text: machine learning for text-based emotion prediction. In Proceedings of the Human Language Technology Conference and the Conference on Empirical Methods in Natural Language Processing (HLT/EMNLP), 2005</a></li>
+            </ol>
+
+            <h3 id="references">References<a class="anchor-link" href="#references"></a></h3>
+            <ul>
+                <li id="ref1"><strong>[ManningSchütze]</strong>: Foundations of Statistical Natural Language Processing, Manning, C. D.,
+                Schütze, H. (ISBN: 0-262-13360-1)</li>
+            </ul>
+
+            <footer class="main-foot">
+                <ul>
+                    <li><a href="#top">Back to top</a></li>
+                    <li><a href="http://www.kopimi.com/kopimi" title="kopimi"><img alt="" src="img/kopimi.svg" class="kopimi"></a></li>
+                    <li>By Christian Schulze<br><a href="http://andinfinity.de">andinfinity.de</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>
