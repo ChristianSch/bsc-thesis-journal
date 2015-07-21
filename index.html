@@ -131,12 +131,13 @@
             <h3 id="nlp">Natural Language Processing<a class="anchor-link" href="#nlp"></a></h3>
             <h4 id="nlp-token">Token<a class="anchor-link" href="#nlp-token"></a></h4>
             <p><em>Token</em> means the individual occurences of something. A Token
-            has an associated <em>Type</em>.<sup><a href="#ref1">[ManningSchütze, P. 22]</a></sup></p>
+            has an associated <em>Type</em>.<sup><a href="#ref1">[MS99, P. 22]</a></sup></p>
 
             <h4 id="ngram-model">n-gram Model<a class="anchor-link" href="#ngram-model"></a></h4>
             <p>The <em>n-gram Model</em> is basically just a Markov Chain modelling
             the assumption that a probability of a word in a text only depends
-            on the previous $k$ words.<sup><a href="#ref1">[ManningSchütze, P. 77]</a></sup></p>
+            on the previous $k$ words.<sup><a href="#ref1">[MS99, P. 77]</a></sup></p>
+            <p>See also <a href="#ref7">[RuNorv14]</a> for a more detailed explanation.</p>
 
             <h4 id="nlp-pos">Parts of Speech (POS)<a class="anchor-link" href="#nlp-pos"></a></h4>
             <p><em>Parts of Speech (POS)</em> refers to classes of words
@@ -146,7 +147,7 @@
             (assumed) class in a sentence.</p>
             <p>Each of these POS classes have associated <em>Parts of Speech Tags</em>
             which really are just abbreviations of the class.
-            <sup><a href="#ref1">[ManningSchütze, P. 81f]</a></sup></p>
+            <sup><a href="#ref1">[MS99, P. 81f]</a></sup></p>
 
             <h4 id="lex-hier">Organizing Words by Lexical Hiearchy<a href="#lex-hier" class="anchor-link"></a></h4>
             <ul>
@@ -161,7 +162,7 @@
                 <li><strong>ambiguity:</strong> polyseme or homonym</li>
                 <li><strong>homophony:</strong> homonym that is pronounced the same way</li>
             </ul>
-            <p>See [<a href="#ref1">[ManningSchütze, P. 77]</a>.</p>
+            <p>See <a href="#ref1">[MS99, P. 77]</a>.</p>
 
             <h4 id="bow">Bag of Words<a class="anchor-link" href="#bow"></a></h4>
             <p><em>Bag of Words</em> is a listing of words with their corresponding
@@ -177,7 +178,7 @@
             <h2 class="week-indicator" id="week-1">Week 1<a class="anchor-link" href="#week-1"></a></h2>
 
             <article>
-                <h3 id="emotions-from-text-tbep">Emotions from text: machine learning for text-based emotion prediction<sup><a href="#footnote3">[3]</a></sup><a class="anchor-link" href="#emotions-from-text-tbep"></a></h3>
+                <h3 id="emotions-from-text-tbep">Emotions from text: machine learning for text-based emotion prediction<sup><a href="#footnote3"></a></sup><a class="anchor-link" href="#emotions-from-text-tbep"></a></h3>
                 <div class="byline">
                     <address class="author">By <a rel="author">Cecilia Ovesdotter Alm</a>, <a rel="author">Dan Roth</a> and <a rel="author">Richard Sproat</a></address>
                 </div>
@@ -202,7 +203,7 @@
                     for a tripartite model which covers emotional valence, as well as feature set alternations.
                     In addition, we present plans for a more cognitively sound sequential model, taking into
                     consideration a larger set of basic emotions.«
-                    <!--<sup><a href="#footnote1">[1]</a></sup>-->
+                    <sup><a href="#ref2">[AlmRoSpo05]</a></sup>
                 </blockquote>
 
                 <h4>Notes</h4>
@@ -223,7 +224,7 @@
             </article>
 
             <article>
-                <h3 id="ml-class-music-emo">[2] Multi-Label Classification of Music into Emotions<a class="anchor-link" href="#ml-class-music-emo"></a></h3>
+                <h3 id="ml-class-music-emo">Multi-Label Classification of Music into Emotions<a class="anchor-link" href="#ml-class-music-emo"></a></h3>
                 <div class="byline">
                     <address class="author">By <a rel="author">Konstantinos Trohidis</a>, <a rel="author">Grigorios Tsoumakas</a>, <a rel="author">George Kalliris</a> and <a rel="author">Ioannis P. Vlahavas</a></address>
                 </div>
@@ -248,7 +249,7 @@
                     Experiments are conducted on a set of 593 songs with 6 clusters of music emotions based
                     on the Tellegen-Watson-Clark model. Results provide interesting insights into the quality
                     of the discussed algorithms and features.«
-                    <!--<sup><a href="#footnote1">[1]</a></sup>-->
+                    <sup><a href="#ref3">[TTKV08]</a></sup>
                 </blockquote>
 
                 <h4>Notes</h4>
@@ -272,7 +273,7 @@
 
             <h2 class="week-indicator" id="week-2">Week 2<a class="anchor-link" href="#week-2"></a></h2>
             <article>
-                <h3 id="judging-movie-poster-dl">[3] Judging a Movie by its Poster using Deep Learning<a class="anchor-link" href="#judging-movie-poster-dl"></a></h3>
+                <h3 id="judging-movie-poster-dl">Judging a Movie by its Poster using Deep Learning<a class="anchor-link" href="#judging-movie-poster-dl"></a></h3>
                 <div class="byline">
                     <address class="author">By <a rel="author">Brett Kuprel</a></address>
                 </div>
@@ -296,6 +297,7 @@
                     autoencoders to predict a movie's genre given an image of its movie poster. My hypothesis
                     is that a good algorithm can correctly guess the genre based on the movie poster at least
                     half the time.«
+                    <sup><a href="#ref4">[Kuprel]</a></sup>
                 </blockquote>
 
                 <h4>Notes</h4>
@@ -313,7 +315,7 @@
             </article>
 
             <article>
-                <h3 id="disamb-music-emo-sa">Disambiguating Music Emotion Using Software Agents<sup>[4]</sup><a class="anchor-link" href="#disamb-music-emo-sa"></a></h3>
+                <h3 id="disamb-music-emo-sa">Disambiguating Music Emotion Using Software Agents<a class="anchor-link" href="#disamb-music-emo-sa"></a></h3>
 
                 <div class="byline">
                     <address class="author">By <a rel="author">Dan Yang</a> and <a rel="author">Won-Sook Lee</a></address>
@@ -345,6 +347,7 @@
                     of mining psychological features of lyrics are promising, recognisable in terms of common
                     sense ideas of emotion and in terms of accuracy. Further ideas for deploying agents in this
                     model of music annotation are presented.«
+                    <sup><a href="#ref5">[YanLee04]</a></sup>
                 </blockquote>
 
                 <h4>Notes</h4>
@@ -369,32 +372,79 @@
 
             <h2 class="week-indicator" id="week-4">Week 4<a class="anchor-link" href="#week-4"></a></h2>
             <article>
-                <h3 id="dl-mlc">Deep Learning for Multi-label Classification<sup>[5]</sup><a class="anchor-link" href="#dl-mlc"></a></h3>
+                <h3 id="dl-mlc">Deep Learning for Multi-label Classification<a class="anchor-link" href="#dl-mlc"></a></h3>
                 <div class="byline">
-                    <address class="author">By <a rel="author"></a></address>
+                    <address class="author">
+                        By <a rel="author">Jesse Read</a> and <a rel="author">Fernando Perez-Cruz</a>
+                    </address>
                 </div>
+
+                <div class="tags">
+                    <ul>
+                        <li>Restricted Boltzmann Machine</li>
+                        <li>Deep Learning</li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    »In multi-label classification, the main focus has been to develop
+                    ways of learning the underlying dependencies between labels, and to
+                    take advantage of this at classification time. Developing better
+                    feature-space representations has been predominantly employed to
+                    reduce complexity, e.g., by eliminating non-helpful feature attributes
+                    from the input space prior to (or during) training. This is an
+                    important task, since many multi-label methods typically create many
+                    different copies or views of the same input data as they transform it,
+                    and considerable memory can be saved by taking advantage of
+                    redundancy. In this paper, we show that a proper development of the
+                    feature space can make labels less interdependent and easier to model
+                    and predict at inference time. For this task we use a deep learning
+                    approach with restricted Boltzmann machines. We present a deep network
+                    that, in an empirical evaluation, outperforms a number of competitive
+                    methods from the literature.«
+                    <sup><a href="#ref6">[ReaPe14]</a></sup>
+                </blockquote>
+
+                <h4>Notes</h4>
+                <ul>
+                    <li>Could become handy when it comes to references</li>
+                    <li>Proposes that even if the abstract hidden variables represented
+                    by the hidden layer do not necessarily correspond directly to given
+                    labels we can expect better performance by using the hidden space</li>
+
+                </ul>
+
+                <h4>Further Action Items</h4>
+                <ul>
+                    <li>Finish reading</li>
+                </ul>
             </article>
 
             <h2 id="appendix">Appendix<a class="anchor-link" href="#appendix"></a></h2>
             <h3 id="footnotes">Footnotes<a class="anchor-link" href="#footnotes"></a></h3>
 
             <ol>
-                <!--<li id="footnote1">Taken from the Machine Learning Video Lecture: »What is Machine Learning?«, Minute <code>01:49</code> at <a href="https://class.coursera.org/ml-008/lecture/2" title="Video Lecture on Coursera">Coursera</a></li>-->
-                <li id="footnote1">»Machine Learning«, Tom E. Mitchell, Published by McGraw-Hill, ISBN: 0070428077</li>
-                <li id="footnote2">»Greedy Layer-Wise Training of Deep Networks«, Yoshua Bengio, Pascal Lamblin, Dan Popovici and Hugo Larochelle, NIPS, 2007</li>
-                <li id="footnote3"><a href="http://l2r.cs.uiuc.edu/~danr/Papers/AlmRoSp05.pdf">Cecilia Ovesdotter Alm, Dan Roth, and Richard Sproat. Emotions from text: machine learning for text-based emotion prediction. In Proceedings of the Human Language Technology Conference and the Conference on Empirical Methods in Natural Language Processing (HLT/EMNLP), 2005</a></li>
+                <li id="footnote1">Mitchell, Tom E.,»Machine Learning«, Published by McGraw-Hill, ISBN: 0070428077</li>
+                <li id="footnote2">Bengio, Yoshua, Lamblin, Pascal, Popovici, Dan and Larochelle, Hugo, »Greedy Layer-Wise Training of Deep Networks«, NIPS, 2007</li>
             </ol>
 
             <h3 id="references">References<a class="anchor-link" href="#references"></a></h3>
             <ul>
-                <li id="ref1"><strong>[ManningSchütze]</strong>: Foundations of Statistical Natural Language Processing, Manning, C. D.,
+                <li id="ref1"><strong>[MS99]:</strong> Foundations of Statistical Natural Language Processing, Manning, C. D.,
                 Schütze, H. (ISBN: 0-262-13360-1)</li>
+                <li id="ref2"><strong>[AlmRoSpo05]:</strong> <a href="http://l2r.cs.uiuc.edu/~danr/Papers/AlmRoSp05.pdf">Alm, Cecilia Ovesdotter, Roth, Dan, and Sproat, Richard . »Emotions from text: machine learning for text-based emotion prediction«. In Proceedings of the Human Language Technology Conference and the Conference on Empirical Methods in Natural Language Processing (HLT/EMNLP), 2005</a></li>
+                <li id="ref3"><strong>[TTKV13]:</strong> <a href="http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf">Trohidis, Konstantinos,
+                    Tsoumakas, Grigorios,Kalliris, George and Vlahavas, Ioannis, »Multi-Label Classification of Music into Emotions«, EURASIP Journal on Audio, Speech, and Music Processing 2011</a></li>
+                <li id="ref4"><strong>[Kuprel]:</strong> <a href="http://stanford.edu/~kuprel/cs221report.pdf">Kuprel, Brett, »Judging a Movie by its Poster using Deep Learning«</a></li>
+                <li id="ref5"><strong>[YanLee04]:</strong> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.458.2901&rep=rep1&type=pdf">Yang, D. and Lee, W., »Disambiguating Music Emotion Using Software Agents«, In Proceedings of the 5th International Conference on Music Information Retrieval, 2004</a></li>
+                <li id="ref6"><strong>[ReaPe14]:</strong> <a href="http://arxiv.org/pdf/1502.05988v1">Read, Jesse and Perez-Cruz, Fernando, »Deep Learning for Multi-label Classification«, 2014</a></li>
+                <li id="ref7"><strong>[RuNorv14]:</strong> Russel, Stuart and Norvig, Peter, »Artificial Intelligence - A Modern Approach«, Pearson, ISBN 978129204202A</li>
             </ul>
 
             <footer class="main-foot">
                 <ul>
                     <li><a href="#top">Back to top</a></li>
-                    <li><a href="http://www.kopimi.com/kopimi" title="kopimi"><img alt="" src="img/kopimi.svg" class="kopimi"></a></li>
+                    <li>&nbsp;</li>
                     <li>By Christian Schulze<br><a href="http://andinfinity.de">andinfinity.de</a></li>
                 </ul>
             </footer>
