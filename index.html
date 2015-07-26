@@ -61,6 +61,7 @@
                                 <li><a href="#ngram-model">n-gram Model</a></li>
                                 <li><a href="#nlp-pos">Part of Speech</a></li>
                                 <li><a href="#lex-hier">Organizing Words by Lexical Hierarchy</a></li>
+                                <li><a href="#stemming">Stemming</a></li>
                                 <li><a href="#bow">Bag of Words</a></li>
                                 <li><a href="#tfidf">Term-frequency-inverse Document Frequency</a></li>
                             </ul>
@@ -132,6 +133,8 @@
             <h4 id="nlp-token">Token<a class="anchor-link" href="#nlp-token"></a></h4>
             <p><em>Token</em> means the individual occurences of something. A Token
             has an associated <em>Type</em>.<sup><a href="#ref1">[MS99, P. 22]</a></sup></p>
+            <p>Splitting texts into Tokens is thus referred to as <em>Tokenization</em>
+            or <em>Tokenizing</em></p>
 
             <h4 id="ngram-model">n-gram Model<a class="anchor-link" href="#ngram-model"></a></h4>
             <p>The <em>n-gram Model</em> is basically just a Markov Chain modelling
@@ -163,6 +166,11 @@
                 <li><strong>homophony:</strong> homonym that is pronounced the same way</li>
             </ul>
             <p>See <a href="#ref1">[MS99, P. 77]</a>.</p>
+
+            <h4 id="stemming">Stemming<a class="anchor-link" href="#stemming"></a></h4>
+            <p>The process of removing affixes from words and thefore leaves
+            only the stem of the word (for example <em>lied</em> and <em>lie</em>).
+            <sup><a href="#ref1">[MSP99, P. 132]</a></sup></p>
 
             <h4 id="bow">Bag of Words<a class="anchor-link" href="#bow"></a></h4>
             <p><em>Bag of Words</em> is a listing of words with their corresponding
